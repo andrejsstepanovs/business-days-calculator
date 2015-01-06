@@ -9,8 +9,7 @@ php:
   - hhvm
 
 before_script:
-  - curl -sS https://getcomposer.org/installer | php
-  - php composer.phar install
+  - composer install
   - chmod 777 travis.phpunit.xml
   - mkdir -p build/logs
 
