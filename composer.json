@@ -1,0 +1,25 @@
+{
+    "name": "andrejsstepanovs/business-days-calculator",
+    "type": "library",
+    "description": "Business day calculation",
+    "keywords": ["business", "days"],
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Andrejs Stepanovs",
+            "email": "andrejsstepanovs@gmail.com",
+            "homepage": "https://github.com/andrejsstepanovs/business-days-calculator"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.0",
+        "phpunit/phpunit": "4.2.*",
+        "satooshi/php-coveralls": "0.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "App\\": "src"
+        }
+    }
+}
