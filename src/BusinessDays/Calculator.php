@@ -1,14 +1,14 @@
 <?php
 
-namespace App;
+namespace BusinessDays;
 
 
 /**
- * Class BusinessDays
+ * Class Calculator
  *
- * @package App
+ * @package BusinessDays
  */
-class BusinessDays
+class Calculator
 {
     const MONDAY    = 1;
     const TUESDAY   = 2;

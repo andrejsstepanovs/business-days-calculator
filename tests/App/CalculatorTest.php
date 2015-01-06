@@ -1,15 +1,15 @@
 <?php
 namespace Tests;
 
-use App\BusinessDays as BusinessDays;
+use BusinessDays\Calculator as BusinessDays;
 
 
 /**
- * Class BusinessDaysTest
+ * Class CalculatorTest
  *
  * @package Tests
  */
-class BusinessDaysTest extends \PHPUnit_Framework_TestCase
+class CalculatorTest extends \PHPUnit_Framework_TestCase
 {
     /** @var BusinessDays */
     private $_sut;
