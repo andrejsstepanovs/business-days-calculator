@@ -9,7 +9,7 @@ Business Days Calculator
 # Install
 
     "require": {
-        "andrejsstepanovs/business-days-calculator": "dev-master",
+        "andrejsstepanovs/business-days-calculator": "1.*",
     }
 
 # Example
