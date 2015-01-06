@@ -3,7 +3,7 @@
 <phpunit colors="true" bootstrap="../vendor/autoload.php" strict="true">
     <testsuites>
         <testsuite name="app">
-            <directory>App</directory>
+            <directory>BusinessDays</directory>
         </testsuite>
     </testsuites>
     <filter>

@@ -1,6 +1,6 @@
 <?php
 
-use App\BusinessDays as BusinessDays;
+use BusinessDays\Calculator;
 
 
 return [
@@ -33,14 +33,14 @@ return [
         new \DateTime('2014-07-25'),
         1,
         new \DateTime('2014-07-28'),
-        [BusinessDays::SATURDAY, BusinessDays::SUNDAY],
+        [Calculator::SATURDAY, Calculator::SUNDAY],
     ],
     [
         'Iterate 1 day with free friday',
         new \DateTime('2014-07-31'),
         1,
         new \DateTime('2014-08-02'),
-        [BusinessDays::FRIDAY],
+        [Calculator::FRIDAY],
     ],
     [
         'Iterate 1 day with free all days except monday',
@@ -48,12 +48,12 @@ return [
         1,
         new \DateTime('2014-07-07'),
         [
-            BusinessDays::TUESDAY,
-            BusinessDays::WEDNESDAY,
-            BusinessDays::THURSDAY,
-            BusinessDays::FRIDAY,
-            BusinessDays::SATURDAY,
-            BusinessDays::SUNDAY,
+            Calculator::TUESDAY,
+            Calculator::WEDNESDAY,
+            Calculator::THURSDAY,
+            Calculator::FRIDAY,
+            Calculator::SATURDAY,
+            Calculator::SUNDAY,
         ],
     ],
     [
@@ -77,7 +77,7 @@ return [
         new \DateTime('2014-07-01'),
         1,
         new \DateTime('2014-07-05'),
-        [BusinessDays::THURSDAY],
+        [Calculator::THURSDAY],
         [new \DateTime('2014-07-02'), new \DateTime('2014-07-04')]
     ],
     [
@@ -85,7 +85,7 @@ return [
         new \DateTime('2014-06-30'),
         4,
         new \DateTime('2014-07-07'),
-        [BusinessDays::TUESDAY],
+        [Calculator::TUESDAY],
         [new \DateTime('2014-07-02'), new \DateTime('2014-07-04')]
     ],
     [
@@ -111,7 +111,7 @@ return [
         new \DateTime('2014-07-01'),
         1,
         new \DateTime('2014-07-05'),
-        [BusinessDays::FRIDAY],
+        [Calculator::FRIDAY],
         [new \DateTime('2014-07-03')],
         [new \DateTime('2000-07-02')]
     ],
@@ -120,7 +120,7 @@ return [
         new \DateTime('2014-07-01'),
         1,
         new \DateTime('2014-07-05'),
-        [BusinessDays::SUNDAY, BusinessDays::FRIDAY],
+        [Calculator::SUNDAY, Calculator::FRIDAY],
         [new \DateTime('2014-08-03'), new \DateTime('2014-10-03'), new \DateTime('2014-07-03')],
         [new \DateTime('2000-07-22'), new \DateTime('2000-09-02'), new \DateTime('2000-07-02')]
     ],

@@ -1,7 +1,7 @@
 <?php
 namespace Tests;
 
-use BusinessDays\Calculator as BusinessDays;
+use BusinessDays\Calculator;
 
 
 /**
@@ -11,12 +11,12 @@ use BusinessDays\Calculator as BusinessDays;
  */
 class CalculatorTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var BusinessDays */
+    /** @var Calculator */
     private $_sut;
 
     public function setUp()
     {
-        $this->_sut = new BusinessDays();
+        $this->_sut = new Calculator();
     }
 
     /**
@@ -29,7 +29,6 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider dataProvider
-     * @covers App\BusinessDays
      *
      * @param string      $message
      * @param \DateTime   $startDate
@@ -61,18 +60,17 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @covers App\BusinessDays
      */
     public function testTooManyBusinessDaysException()
     {
         $nonBusinessDays = [
-            BusinessDays::MONDAY,
-            BusinessDays::TUESDAY,
-            BusinessDays::WEDNESDAY,
-            BusinessDays::THURSDAY,
-            BusinessDays::FRIDAY,
-            BusinessDays::SATURDAY,
-            BusinessDays::SUNDAY
+            Calculator::MONDAY,
+            Calculator::TUESDAY,
+            Calculator::WEDNESDAY,
+            Calculator::THURSDAY,
+            Calculator::FRIDAY,
+            Calculator::SATURDAY,
+            Calculator::SUNDAY
         ];
 
         $this->_sut->setFreeWeekDays($nonBusinessDays);
@@ -80,9 +78,6 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
         $this->_sut->getDate();
     }
 
-    /**
-     * @covers App\BusinessDays
-     */
     public function testThatPassedParameterIsNotChangedByReferenceInSut()
     {
         $date = new \DateTime('2000-01-01');
