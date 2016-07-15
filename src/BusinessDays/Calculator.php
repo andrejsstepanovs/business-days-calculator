@@ -170,7 +170,7 @@ class Calculator
      *
      * @return bool
      */
-    private function isFreeWeekDayDay(\DateTime $date)
+    public function isFreeWeekDayDay(\DateTime $date)
     {
         $currentWeekDay = (int)$date->format(self::WEEK_DAY_FORMAT);
 
@@ -186,7 +186,7 @@ class Calculator
      *
      * @return bool
      */
-    private function isHoliday(\DateTime $date)
+    public function isHoliday(\DateTime $date)
     {
         $holidayFormatValue = $date->format(self::HOLIDAY_FORMAT);
         foreach ($this->getHolidays() as $holiday) {
@@ -203,7 +203,7 @@ class Calculator
      *
      * @return bool
      */
-    private function isFreeDay(\DateTime $date)
+    public function isFreeDay(\DateTime $date)
     {
         $freeDayFormatValue = $date->format(self::FREE_DAY_FORMAT);
         foreach ($this->getFreeDays() as $freeDay) {
