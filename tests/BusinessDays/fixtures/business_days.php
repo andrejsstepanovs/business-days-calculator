@@ -95,7 +95,7 @@ return [
         new \DateTime('2014-07-03'),
         [],
         [],
-        [new \DateTime('2000-07-02')]
+        [new \DateTime('2014-07-02')]
     ],
     [
         'Iterate 1 day with holiday and free day in the middle',
@@ -104,7 +104,7 @@ return [
         new \DateTime('2014-07-04'),
         [],
         [new \DateTime('2014-07-03')],
-        [new \DateTime('2000-07-02')]
+        [new \DateTime('2014-07-02')]
     ],
     [
         'Iterate 1 day with holiday, free day and free Friday in the middle',
@@ -113,7 +113,7 @@ return [
         new \DateTime('2014-07-05'),
         [Calculator::FRIDAY],
         [new \DateTime('2014-07-03')],
-        [new \DateTime('2000-07-02')]
+        [new \DateTime('2014-07-02')]
     ],
     [
         'Iterate 1 day with holiday, free day and free Friday in the middle + other unrelated days',
@@ -122,6 +122,6 @@ return [
         new \DateTime('2014-07-05'),
         [Calculator::SUNDAY, Calculator::FRIDAY],
         [new \DateTime('2014-08-03'), new \DateTime('2014-10-03'), new \DateTime('2014-07-03')],
-        [new \DateTime('2000-07-22'), new \DateTime('2000-09-02'), new \DateTime('2000-07-02')]
+        [new \DateTime('2014-07-22'), new \DateTime('2014-09-02'), new \DateTime('2014-07-02')]
     ],
 ];
