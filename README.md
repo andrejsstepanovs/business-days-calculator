@@ -11,7 +11,7 @@ Business Days Calculator
 * If you're using Composer to manage dependencies, you can use
 
 ```sh
-composer require nuxia/business-day-manipulator
+composer require andrejsstepanovs/business-days-calculator
 ```
 
 or add to your composer.json file:
