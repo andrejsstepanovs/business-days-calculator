@@ -120,6 +120,10 @@ class Calculator
      */
     public function addBusinessDays($howManyDays)
     {
+        if ($howManyDays < 1) {
+            throw new \InvalidArgumentException('The parameter $howManyDays must be greater than 0');
+        }
+
         $iterator = 0;
         while ($iterator < $howManyDays) {
             $this->getDate()->modify('+1 day');
@@ -128,6 +132,29 @@ class Calculator
             }
         }
 
+        return $this;
+    }
+
+    /**
+     * @param int $howManyDays
+     *
+     * @return $this
+     */
+    public function subBusinessDays($howManyDays)
+    {
+        if ($howManyDays < 1) {
+            throw new \InvalidArgumentException('The parameter $howManyDays must be greater than 0');
+        }
+
+        $iterator = 0;
+        while ($iterator < $howManyDays) {
+            if ($this->isBusinessDay($this->getDate())) {
+                $iterator++;
+            }
+            if ($iterator < $howManyDays) { //Don`t modify the date if we are on the last iteration
+                $this->getDate()->modify('-1 day');
+            }
+        }
         return $this;
     }
 
